@@ -1,0 +1,99 @@
+/*
+Style for Products CPT
+*/
+
+.ava-products { //wrapper for all ava-products style	
+		h2 {color: #e65000;}
+	
+		.product-header {
+			min-height:400px;
+			background: url('../img/map-texture.svg');
+			background-repeat: none;
+			background-size: cover;
+			padding-top:25px;
+			padding-bottom:15px;
+
+			h1 {
+				margin-bottom:0;
+				padding-bottom:0;
+				font-size:48px;
+				font-weight:400;
+				color:#e65000;
+			}
+			h5{
+				padding-top:0;
+				margin-top: 0;
+				color:#1a1a1a;
+				font-size:18px;
+				font-weight:400;
+			}
+		}
+
+		
+		.intro-container {
+			display: flex;
+		    align-items: center;
+		}
+	
+
+	.feature-section {
+		position:relative;
+
+		h5 {
+			padding-top:0; 
+			margin-top: 0; 
+			margin-bottom:0;
+			padding-bottom:0;
+			font-size: 18px;
+			font-weight:400;
+			color: #e65000;
+		}
+		p {padding-top:0; margin-top: 0; font-size: 18px;}
+		
+		.feature {
+			position:relative;
+			.check {
+				position:absolute;
+				color:#ff6600;
+				float:left;
+				width:50px;
+				.fa-check {font-size:36px;}
+			}
+			.content {
+				padding-left:50px;
+			}
+		}
+
+	}
+
+	.form-opacity-wrap {
+    background-color: rgba(255, 255, 255, 0.7);
+	}
+	
+	.avatax-hero-banner {
+	    padding-bottom: 20px !important;
+	}
+	#avaform-container .opacity-container {
+    margin-right:0;
+    max-width:320px;
+	}
+	#avaform-container form {
+    padding:20px 20px 20px 20px;
+	}
+
+}
+
+
+@media (max-width: 767px) {
+	.ava-products {
+		.intro-container {
+			display: inline;
+		}
+
+		#avaform-container .opacity-container {
+		    margin-right:auto;
+		    margin-left:auto;
+		}
+	}
+}
+

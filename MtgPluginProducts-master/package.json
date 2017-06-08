@@ -1,0 +1,39 @@
+{
+  "name": "avalara-brazil",
+  "version": "1.0.0",
+  "description": "Plugin for Avalara Brazil functionality",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-contrib-cssmin": "^1.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "autoprefixer-core": "^6.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-watch": "^1.0.0",
+    "install": "^0.8.1",
+    "npm": "^3.10.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joel Bengson",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AvalaraDev/AvalaraTheme.git"
+  },
+  "keywords": [
+    "brazil"
+  ],
+  "bugs": {
+    "url": "https://github.com/AvalaraDev/AvalaraTheme/issues"
+  },
+  "homepage": "https://github.com/AvalaraDev/AvalaraTheme#readme"
+}

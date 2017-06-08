@@ -1,0 +1,51 @@
+
+<div class="product-header fusion-fullwidth fullwidth-box fusion-fullwidth-1  fusion-parallax-none nonhundred-percent-fullwidth uber-banner " style="margin-top:-50px;">
+<div class="fusion-row intro-container">
+	<div class="col-md-6 col-sm-12">
+				<h1>{{post.title}}</h1>
+				<h5>
+				{{post.get_field('product_description')}}
+				</h5>
+	</div>
+
+		<div class="col-md-4 col-sm-12 col-md-offset-2" id="avaform-container">
+		{% if post.get_field('show_avaform') == true %}
+			<div class="opacity-container">
+			<div class="form-opacity-wrap">
+				{% filter shortcodes %}{{post.get_field('avaform_shortcode')}}{% endfilter %}
+			</div>
+			</div>
+		{% endif %}
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">{{post.get_field('product_info')}}</div>
+</div>
+{% if post.get_field('product_feature') %}
+	<div class="row">
+		<div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+			<h2><?php  _e( 'Features', 'avalara-product-cpt' ); ?></h2>
+		</div>
+	</div>
+{% endif %}
+<div class="row feature-section">
+	<div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+		{% set cols = 2 %}
+		{% for feature in post.get_field('product_feature') %}
+			{% if loop.index0 % cols == 0 %}
+			    <div class="row">
+			{% endif %}
+			    <div class="col-md-6 col-sm-6 col-xs-12 feature">
+			    	<div class="check"><i class="fa fa-check fa-lg"></i></div>
+				    <div class="content">
+				        <h5>{{feature.feature_title}}</h5>
+				        {{feature.feature_description}}
+				    </div>
+			    </div>
+			{% if (loop.index0 % cols == cols - 1 or loop.last) %}
+			    </div>
+			{% endif %}
+    	{% endfor %}
+	</div>
+</div>
