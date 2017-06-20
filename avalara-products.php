@@ -7,8 +7,8 @@ Plugin Name: Avalara Products
 Plugin URI:
 Description: CPT and Settings specific to Avalara Custom Post Types and design modules
 Version: 0.0.1
-Author: Joel Bengson
-Author URI: https://github.com/jbengson
+Author: Andy Roberts & Joel Bengson
+Author URI: https://github.com/blahblahyaya https://github.com/jbengson
 License:
 
 */
