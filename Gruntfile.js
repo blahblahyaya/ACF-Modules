@@ -28,16 +28,28 @@ module.exports = function(grunt) {
     },
     watch: {
       less: {
-        files: 
+        files:
           'assets/less/*.less'
         ,
-        tasks: ['less:dev']
+        tasks: ['less:dev','version']
       }
     },
     clean: {
       assets: [
         'assets/css/*'
       ]
+    },
+    version: {
+      assets: {
+        options: {
+          algorithm: 'md5',
+          length: 6,
+          rename: true
+      },
+        files: {
+          'avalara-products.php': ['assets/css/products.css']
+        }
+      }
     },
     cssmin: {
       options: {
@@ -46,7 +58,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'assets/css/brazil-products.css': ['assets/css/products.css']
+          'assets/css/products.css': ['assets/css/products.css']
         }
       }
     },
@@ -61,11 +73,11 @@ module.exports = function(grunt) {
         ]
       },
       dist: {
-        src: 
+        src:
           'assets/css/*'
       }
     }
-    
+
       });
 
   // Load tasks
@@ -75,6 +87,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-wp-assets');
 
 
   // Register tasks
@@ -82,7 +95,8 @@ module.exports = function(grunt) {
     'clean:assets',
     'less:dev',
     'postcss:dist',
-    'cssmin:target'
+    'cssmin:target',
+    'version'
   ]);
 
   // Register tasks
@@ -90,7 +104,8 @@ module.exports = function(grunt) {
     'clean:assets',
     'less:dist',
     'postcss:dist',
-    'cssmin:target'
+    'cssmin:target',
+    'version'
   ]);
 
   grunt.registerTask('dev', [

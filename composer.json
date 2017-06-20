@@ -1,0 +1,27 @@
+{
+  "name": "AvalaraDev/MtgPluginProducts",
+  "type": "wordpress-plugin",
+  "license": "",
+  "description": "",
+  "homepage": "https://github.com/AvalaraDev/MtgPluginProducts",
+  "authors": [
+    {
+      "name": "Joel Bengson",
+      "email": "joelbengson@gmail.com",
+      "homepage": "https://github.com/jbengson"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "support": {
+    "issues": "https://github.com/AvalaraDev/MtgPluginProducts/issues"
+  },
+  "require": {
+    "php": ">=5.5.0",
+    "composer/installers": "~1.0"
+  },
+  "require-dev": {
+
+  }
+}

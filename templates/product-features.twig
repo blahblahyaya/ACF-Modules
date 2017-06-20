@@ -1,0 +1,45 @@
+<div id="content" class="avalara-cpt-no-sidebar ava-products">
+{% if row.acf_fc_layout == 'product_features' %}
+  {% if row.feature_statements %}
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+        <h2><?php  _e( 'Features', 'avalara-product-cpt' ); ?></h2>
+      </div>
+    </div>
+  {% endif %}
+  <div class="row feature-section" style="margin-left: -74px;">
+    <div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+      {% for feature in row.feature_statements %}
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 feature">
+              <div class="check"><i class="fa fa-check fa-lg"></i></div>
+              <div class="content">
+                  <h5 style="font-size:24px;font-weight: 400;">{{feature.feature_title_left}}</h5>
+                  {{feature.feature_description_left}}
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12 feature">
+              <div class="check"><i class="fa fa-check fa-lg"></i></div>
+              <div class="content">
+                  <h5 style="font-size:24px;font-weight: 400;">{{feature.feature_title_right}}</h5>
+                  {{feature.feature_description_right}}
+              </div>
+            </div>
+          </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+</div>
+<div class="row">
+    <div class="col-md-4 col-sm-12 col-md-offset-3" id="avaform-container">
+  {% if post.get_field('show_avaform') == true and post.device == 'mobile'  %}
+            <div class="opacity-container">
+                  <div class="form-opacity-wrap">
+                        {% filter shortcodes %}{{post.get_field('avaform_shortcode')}}{% endfilter %}
+                       
+                  </div>
+        </div>
+  {% endif %}
+     </div>
+</div>

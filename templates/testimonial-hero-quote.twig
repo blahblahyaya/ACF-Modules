@@ -1,0 +1,18 @@
+{% if row.acf_fc_layout == 'testimonial_hero_quote' %}
+      <style type="text/css">
+      .hero-quote p {
+            line-height: 1.2em !important;
+      }
+      </style>
+      <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                  <h2 style="font-family: 'Apertura-Regular', 'Apertura';font-weight: 400;font-style: normal;font-size: 24px;padding-top: 10px; color: #506f77;text-align: center; line-height: 1.2em;" data-fontsize="24" data-lineheight="14">{{row.quote}}</h2>
+            </div>
+      </div>
+      <div class="row" style="text-align: center;">
+            <div class="col-md-6 col-md-offset-3">
+                  <span style="font-family: 'Apertura-Regular', 'Apertura';font-weight: 400;font-style: normal;font-size: 18px;padding-top: 10px;padding-bottom:10px;text-align: center;margin-bottom: 10px;" data-fontsize="18" data-lineheight="22">{{row.quote_attribution_name_and_location}}</span>
+                  <div class="fusion-clearfix"></div>
+            </div>
+      </div>
+{% endif %}

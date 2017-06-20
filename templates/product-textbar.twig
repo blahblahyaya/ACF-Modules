@@ -1,0 +1,36 @@
+{% if row.acf_fc_layout == 'product_textbar' %}
+      <style type="text/css">
+            .textbar-left {
+                  padding-right: 0px;
+            }
+            .textbar-left > div > h5 {
+                  margin-bottom: 10px;
+            }
+
+            .textbar-right {
+                  padding-left: 0px;
+            } 
+            @media (max-width: 991px) {
+                  .textbar-left {
+                        padding-right: 15px;
+                  }
+                  .textbar-right {
+                        padding-left: 15px;
+                  } 
+            }
+      </style>
+      <div class="row" style="padding-bottom: 25px;">
+            <div class="col-md-3 col-md-offset-3 textbar-left">
+                  <div class="fusion-column-wrapper" style="background-color:#e65000;" data-bg-url="">
+                        <h5 style="font-family: 'Apertura-Regular', 'Apertura';font-weight: 400;font-style: normal;font-size: 18px;padding-top: 10px; color: #fff;text-align: center;" data-fontsize="18" data-lineheight="22">{{row.left_text}}</h5>
+                        <div class="fusion-clearfix"></div>
+                  </div>
+            </div>
+            <div class="col-md-3 textbar-right">
+                  <div class="fusion-column-wrapper" style="background-color:#fff;" data-bg-url="">
+                        <h5 style="font-family: 'Apertura-Regular', 'Apertura';font-weight: 400;font-style: normal;font-size: 18px;padding-top: 10px;padding-bottom:8px;text-align: center;border: 1px solid rgba(145, 145, 149, 1); margin-bottom: 10px;" data-fontsize="18" data-lineheight="22"><a href="{{row.file}}" target="_blank">{{row.right_text}} &gt;</a></h5>
+                        <div class="fusion-clearfix"></div>
+                  </div>
+            </div>
+      </div>
+{% endif %}

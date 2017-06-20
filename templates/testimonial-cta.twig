@@ -1,0 +1,78 @@
+{% if row.acf_fc_layout == 'testimonial_cta' %}
+      <style type="text/css">
+            @media (max-width:800px) {
+                  .testimonial-cta {
+                      border-right: 0px !important;
+                  }
+            }
+      </style>
+      <div class="fusion-fullwidth fullwidth-box nonhundred-percent-fullwidth" style="background-color: #f5f5f5;background-position: center center;background-repeat: no-repeat;padding-top:25px;padding-right:30px;padding-left:30px;">
+      <div class="fusion-builder-row fusion-row ">
+            <div class="fusion-layout-column fusion_builder_column fusion_builder_column_1_1  fusion-one-full fusion-column-first fusion-column-last 1_1" style="margin-top:0px;margin-bottom:0px;">
+                  <div class="fusion-column-wrapper" style="background-position:left top;background-repeat:no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;" data-bg-url="">
+                        <div class="fusion-fullwidth fullwidth-box fusion-fullwidth-1 fusion-parallax-none nonhundred-percent-fullwidth" style="background-color: #F5F5F5;background-repeat:no-repeat;background-size:cover;">
+            <div style="text-align: center;"><h1 style="font-size: 36px;color:#e65000;">{{row.headline}}</h1></div>
+
+            <div class="testimonial-cta fusion-layout-column fusion_builder_column fusion_builder_column_1_3 fusion-one-third 1_3" style="margin-top:0px;margin-bottom:40px;width:30.6666%; min-height:160px;border-right: 2px solid #5f6062; margin-right: 4%;text-align: center;">
+                  <h2 style="color: #5f6062;font-size: 24px; margin-bottom: 15px;margin-top: 10px;">{{row.left_headline}}</h2>
+                  <h3 style="font-family: Apertura;color:#5f6062;font-size: 18px;">{{row.left_detail}}</h3>
+                  <h1 style="color:#e65000;font-size: 36px;">{{row.left_cta}}</h1>
+            </div>          
+      
+            <div class="testimonial-cta fusion-layout-column fusion_builder_column fusion_builder_column_1_3 fusion-one-third 1_3" style="margin-top:0px;margin-bottom:40px;width:30.6666%; min-height:160px;border-right: 2px solid #5f6062; margin-right: 4%;text-align: center;">
+                  <h2 style="font-family: Apertura;color: #5f6062;font-size: 36px;margin-bottom: 15px;padding-bottom: 0px;">{{row.middle_headline}}</h2>
+                  <h3 style="font-family: Apertura;color:#5f6062;font-size: 18px;">{{row.middle_detail}}</h3>
+                  <style type="text/css">
+                  .bttn-blue:hover {
+                        background-color: #fff;
+                        border-width: 2px;
+                        border-style: solid;
+                        border-color: rgba(5, 155, 210, 1);
+                        color: rgba(22, 155, 213, 1);
+                        box-sizing: border-box;
+                        border-width: 2px;
+                        border-style: solid;
+                        box-shadow: none;
+                  }
+                  </style>
+                  <a href="{{row.middle_button_link}}"><button class="bttn bttn-md bttn-blue js-avaform-modal-email">{{row.middle_button_text}}</button></a>
+            </div>     
+
+            <div class="testimonial-cta fusion-layout-column fusion_builder_column fusion_builder_column_1_3 fusion-one-third 1_3 fusion-column-last" style="margin-top:0px;margin-bottom:40px;width:30.6666%; min-height:160px;text-align: center;">
+                  <h2 style="color: #5f6062;font-size: 24px; margin-bottom: 15px;margin-top: 10px;">{{row.right_headline}}</h2>
+                  <h3 style="font-family: Apertura;color:#5f6062;font-size: 18px;">{{row.right_detail}}</h3>
+                  <style>
+                  .bttn-ghost {
+                        border: 2px solid #0587be !important;
+                        color:#0587be;
+                        background-color: #fff;
+                        padding: 10px;
+                        padding-top: 7px;
+                        padding-bottom: 7px;
+                  }
+                  </style>
+                  <a href="{{row.right_button_link}}"><button class="bttn bttn-md bttn-ghost js-avaform-modal-email bttn-white-border">{{row.right_button_text}}</button></a>
+            </div>       
+
+           <!-- <div class="fusion-column-wrapper" style="padding: 20px; height: auto;text-align: center;" data-bg-url="">
+            <div class="fusion-layout-column fusion_builder_column equal-height fusion_builder_column_1_3 fusion-one-third fusion-column-last 1_3" style="margin-top: 0px; margin-bottom: 20px; width: 30.6666%;">
+                  <div style="margin-left: -20px;margin-top: -20px;margin-right: -20px;padding: 18px 20px 5px;">
+                        <h2 style="color: #5f6062;font-size: 24px; margin-bottom: 15px;">{{row.right_headline}}</h2>
+                        <h3 style="font-family: Apertura;color:#5f6062;font-size: 18px;">{{row.right_detail}}</h3>
+                        <style>
+                        .bttn-ghost {
+                              border: 2px solid #0587be;
+                              color:#0587be;
+                              background-color: #fff;
+                              padding: 10px;
+                              padding-top: 7px;
+                              padding-bottom: 7px;
+                        }
+                        </style>
+                        <a href="{{row.middle_button_link}}"><button class="bttn ttn-md bttn-ghost" href="{{row.right_button_link}}">{{row.right_button_text}}</button></a>
+                  </div>
+                  <div class="fusion-clearfix"></div>
+            </div></div>  -->
+      </div></div><div class="fusion-clearfix"></div>
+            </div></div></div>
+{% endif %}

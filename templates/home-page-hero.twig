@@ -1,0 +1,112 @@
+
+{% if row.template_to_use == 'Shortcode' %}
+	<style>
+	.hero-banner {
+		height: 300px !important;
+     	padding-top: 0px !important;
+     }
+	</style>
+	<div class="hero-dm">
+		{% filter shortcodes %}{{row.hero_shortcode}}{% endfilter %}
+	</div>
+{% else %}
+<style id="hero-styles">
+@media (max-width:480px) {
+	.hero-banner { 
+		background-image:url("{{row.hero_image_768.url}}"); 
+	} 
+	div.fusion-fullwidth.fullwidth-box.uber-banner.hero-banner.nonhundred-percent-fullwidth {
+		height:570px;
+	}
+} 
+
+@media (min-width: 481px) and (max-width:768px) {
+	.hero-banner { 
+		background-image:url("{{row.hero_image_1000.url}}"); 
+	} 
+	div.fusion-fullwidth.fullwidth-box.uber-banner.hero-banner.nonhundred-percent-fullwidth {
+		height:570px;
+	}
+} 
+
+@media (min-width: 769px) and (max-width:992px) {
+	.hero-banner { 
+		background-image:url("{{row.hero_image_1200.url}}"); 
+	} 
+} 
+
+@media (min-width: 993px) {
+	.hero-banner { 
+		background-image:url("{{row.hero_image_1400.url}}"); 
+	} 
+}
+
+.hero-title {
+color:#e65000 !important;
+}
+.hero-cta h2.hero-tagline {
+color:#fff !important;
+}
+@media (max-width:768px) {
+.hero-title {
+font-size:32px !important;
+}
+.hero-cta h2.hero-tagline {
+font-size:20px !important;
+}
+.hero-cta .form-group {
+margin-bottom:0px;
+}
+.avaform-modal-email {
+width:100%;
+margin-right:0px;
+}
+.hero-cta .form-group .bttn {
+width:100%;
+}
+}
+.hero-banner {
+    background-size: cover;
+    background-position: center;
+    background-position-x: 50%;
+    background-position-y: 60%;
+    height: 570px;
+    padding-top: 200px;
+    font-family: 'Apertura-Regular','Apertura', Arial, sans-serif;
+}
+</style>
+<div class="fusion-fullwidth fullwidth-box fusion-fullwidth-1  fusion-parallax-none nonhundred-percent-fullwidth uber-banner hero-banner" style="border-color:#eae9e9;border-bottom-width: 0px;border-top-width: 0px;border-bottom-style: solid;border-top-style: solid;padding-bottom:20px;padding-top:20px;padding-left:30px;padding-right:30px;padding-left:30px !important;padding-right:30px !important;">
+<style type="text/css" scoped="scoped">.fusion-fullwidth-1 {padding-left: 30px !important;padding-right: 30px !important;}</style><div class="fusion-row">
+<div class="fusion-one-full fusion-layout-column fusion-column-last fusion-spacing-yes hero-cta uber-target" style="margin-top:0px;margin-bottom:20px;"><div class="fusion-column-wrapper"><div class="uber-target">
+<div class="hero-cta">
+<div class="col-xs-12 col-md-12 col-lg-6 col-lg-offset-3 text-center">
+<h2 class="hero-tagline" style="margin-bottom: 40px;line-height:48px;font-size: 48px;font-family: 'Apertura-Regular','Apertura', Arial, sans-serif;padding-top: 30px;{% if row.hero_text_color == 'dark' %}color: #5f6062 !important;{% endif %}" data-fontsize="48" data-lineheight="60">{{row.hero_text}}</h2>
+<form class="form-inline short-form" id="home-hero-form" novalidate="novalidate" __bizdiag="0" __biza="WJV_">
+<div class="form-group" style="position:relative">
+		<input class="avaform-modal-email" type="email" placeholder="Email Address" required="" style="padding: 6px;border: 2px solid #aeaeae;">
+	</div>
+<div class="form-group">
+		<button class="bttn bttn-md bttn-blue js-avaform-modal-email" style="padding: 6px 10px;font-size: 16px;border-radius: 0;margin-left: -6px;">{{row.hero_button_label}}</button>
+	</div>
+</form>
+<style>
+	#home-hero-form label.error {
+		position:absolute;
+		left:0;
+		margin-top:50px;
+  	}.avaform-modal-email {
+		padding: 12px;
+		border: 2px solid #059bd2;
+		text-align: left;
+	}::-webkit-input-placeholder {
+	   text-align: left;
+	}::-moz-placeholder {
+	   text-align: left;
+	}
+</style>
+<p></p>
+</div>
+</div>
+</div>
+<div class="fusion-clearfix"></div></div></div><div class="fusion-clearfix"></div></div></div>
+{% endif %}

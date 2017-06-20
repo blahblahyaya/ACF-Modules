@@ -1,0 +1,93 @@
+<style type="text/css">
+@media (max-width:768px) {
+    .ava-about .about-header {
+        height: 200px;
+        background-image: url("{% if row.section_background_mobile.url|length > 0 %}{{row.section_background_mobile.url}}{% endif %}");
+    }
+    .hero-cta,
+    .hero-banner {
+        text-align: center;        
+    }
+    #main #content h1 {
+        margin-top: 30px;
+    }
+    .customer-callout {
+        display: none !important;
+    }
+    #main #content .hero-banner h1.hero-title {
+        margin-top: 40px;
+        font-size: 32px;
+    }
+    #main #content .hero-banner h2 {
+        font-size: 20px;
+    }
+    div.fusion-fullwidth.fullwidth-box.uber-banner.hero-banner.nonhundred-percent-fullwidth {
+        height:570px;
+    }
+}
+
+@media (min-width: 769px) and (max-width:991px) {
+    .hero-cta,
+    .hero-banner {
+        text-align: center;
+    }
+    #main #content h1 {
+        margin-top: 30px;
+    }
+    .customer-callout {
+        display: none !important;
+    }
+    .hero-banner {
+        height: 300px;
+    }
+    #main #content .hero-banner h1.hero-title {
+        margin-top: 80px;
+        font-size: 40px;
+    }
+    #main #content .hero-banner h2 {
+        font-size: 28px;
+    }
+    .ava-about .about-header {
+        text-align: center;
+        background-image: url("{% if row.section_background_mobile.url|length > 0 %}{{row.section_background_mobile.url}}{% endif %}");
+        height: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero-cta,
+    .hero-banner {
+        text-align: left;
+    }
+    #main #content h1 {
+        margin-top: 80px;
+    }
+    .ava-about .about-header {
+        text-align: center;
+        background-image: url("{% if row.section_background.url|length > 0 %}{{row.section_background.url}}{% endif %}");
+        height: 300px;
+}
+</style>
+<div id="content" class="avalara-cpt-no-sidebar ava-about">
+    <div class="about-header fusion-fullwidth fullwidth-box fusion-fullwidth-1 fusion-parallax-none nonhundred-percent-fullwidth uber-banner hero-banner" style="background-repeat:no-repeat;background-size:cover;">
+        <div class="fusion-row hero-cta">
+            <div class="col-md-12 col-sm-12">
+                <h1 style="font-size: 48px;color: #5f6062;">{{post.title}}</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 45px;">
+        <div class="col-md-6 col-md-offset-3">{{post.post_content}}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3"><hr/></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">{{row.final_text}}</div>
+    </div>
+    <div class="row" style="margin-bottom: 45px;">
+        <div class="col-md-6 col-md-offset-3">
+            <a href="{{row.link}}">{{row.link_text}}</a>
+        </div>
+    </div>
+</div>

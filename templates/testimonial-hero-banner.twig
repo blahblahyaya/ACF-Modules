@@ -1,0 +1,10 @@
+{% if row.acf_fc_layout == 'testimonial_hero_banner' %}
+      <div class="product-header fusion-fullwidth fullwidth-box fusion-fullwidth-1 fusion-parallax-none nonhundred-percent-fullwidth uber-banner " style="margin-top:-50px;margin-bottom: 15px;min-height:300px;{% if row.hero_image_large.url|length > 0 %}background: url('{{row.hero_image_large.url}}');{% endif %};background-repeat:no-repeat;background-size:cover;">
+            <div class="fusion-row intro-container">
+      	     <div class="col-md-5 col-sm-12" style="margin-top:100px;padding-left:40px;">
+      	           <h1 style="font-size: 45px;">{{row.headline}}</h1>
+      	           {{row.tag_line}}
+      	     </div>
+            </div>
+      </div>
+{% endif %}

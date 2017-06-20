@@ -1,0 +1,19 @@
+<div class="fusion-fullwidth fullwidth-box fusion-fullwidth-2  fusion-parallax-none nonhundred-percent-fullwidth" style="border-color:#eae9e9;border-bottom-width: 0px;border-top-width: 0px;border-bottom-style: solid;border-top-style: solid;padding-bottom:0px;padding-top:60px;padding-left:30px;padding-right:30px;padding-left:30px !important;padding-right:30px !important;"><style type="text/css" scoped="scoped">.fusion-fullwidth-2 {
+                            padding-left: 30px !important;
+                            padding-right: 30px !important;
+                        }
+    p { margin-top: 7px;margin-bottom: 2px; }</style><div class="fusion-row"><div class="fusion-one-half fusion-layout-column fusion-spacing-yes" style="margin-top:0px;margin-bottom:20px;"><div class="fusion-column-wrapper"><h2 data-fontsize="36" data-lineheight="45" style="color: #E65000;margin-bottom: 0px;">{{row.headline}}</h2>
+{{ row.main_body }}
+<div class="fusion-clearfix"></div></div></div><div class="fusion-one-half fusion-layout-column fusion-column-last fusion-spacing-yes" style="margin-top:0px;margin-bottom:20px;"><div class="fusion-column-wrapper" style="border:2px solid #eaeaea;"><div style="color: #000;background-color: #eaeaea;margin-top: 0px;width: 100%;padding: 0px 0px 4px;text-align: center">
+<h5 style="color: #1a1a1a;margin: 0;font-weight: 400;font-size: 16px;line-height: 32px;" data-fontsize="16" data-lineheight="32">{{row.box_title}}</h5>
+</div>
+<div style="padding: 10px 10px 4px;">
+<h3 style="margin-top: 0px;font-size: 24px;font-weight: 400;color: #E65000;" data-fontsize="24" data-lineheight="30">{{row.secondary_headline}}</h3>
+{{row.secondary_description}}
+{% if row.learn_more_link_type == 'Internal' %}
+<a href="{{row.learn_more_link}}" target="_blank">Learn more &gt;</a>
+{% else %}
+<a href="{{row.external_link}}" target="_blank">Learn more &gt;</a>
+{% endif %}
+</div>
+<div class="fusion-clearfix"></div></div></div><div class="fusion-clearfix"></div></div></div>

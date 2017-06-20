@@ -1,0 +1,20 @@
+{% if row.acf_fc_layout == 'whitepaper_hero' %}
+  {% if post.post_type == 'research' %}
+  {% else %}
+    <div class="col-md-8 col-md-offset-2 whitepaper-main">
+  {% endif %}
+
+    <div class="banner-block">
+      <img src="{% if row.hero_image.url|length > 0 %}{{row.hero_image.url}}{% else %}{{"https://d2hgrtp97a3xft.cloudfront.net/wp-content/uploads/2014/02/generic_head.png"}}{% endif %}" class="hidden-print" style="width:100%">
+  	    <h2 class="entry-title" data-fontsize="36" data-lineheight="45">{{post.title}}</h2>
+  	    <h3 class="entry-sub-title wp-entry-subhead" data-fontsize="24" data-lineheight="30"></h3>
+  	    <span style="display:none;"><a href="https://plus.google.com/105101594997521254473/?rel=author">Avalara</a></span>
+    </div>
+  {% if post.post_type == 'research' %}
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">{{ post.post_content }}</div>
+  {% else %}
+    </div>
+  {% endif %}
+{% endif %}

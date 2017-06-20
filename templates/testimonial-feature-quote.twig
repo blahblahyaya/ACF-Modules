@@ -1,0 +1,34 @@
+{% if row.acf_fc_layout == 'testimonial_feature_quote' %}
+      {% if row.quote_image_left_right|lower == 'right' %}
+      <div class="fusion-fullwidth fullwidth-box fusion-fullwidth-1 fusion-parallax-none nonhundred-percent-fullwidth uber-banner " style="margin-top:-50px;margin-bottom: 40px;min-height:260px;background-color: {% if row.quote_background_color == 'light' %}#efefef{% else %} #6e6e6e{% endif %};{% if row.hero_image_large.url|length > 0 %}background: url('{{row.hero_image_large.url}}');{% endif %};background-repeat:no-repeat;background-size:cover;">
+            <div class="col-md-7">
+                  <div class="fusion-column-wrapper" data-bg-url="">
+                        <h5 style="font-family: 'Apertura-Regular', 'Apertura';font-weight: 400;font-style: normal;font-size: 24px;color: {% if row.quote_background_color == 'light' %}#7e7e7e;{% else %} #fff;{% endif %}margin-left:20px;margin-bottom: 0px;" data-fontsize="18" data-lineheight="22">{{row.quote}}</h5>
+                        <p style="font-size: 20px;color: {% if row.quote_background_color == 'light' %}#7e7e7e;{% else %} #fff;{% endif %}margin-left:20px;margin-top: 5px;">{{row.quote_attribution_name_and_location}}</p>
+                        <div class="fusion-clearfix"></div>
+                  </div>
+            </div>
+            <div class="col-md-4 col-md-offset-1" style="margin-top:0px;padding-right:0px !important;">
+                  <div style="min-height:260px;background-color:#fff;{% if row.feature_image.url|length > 0 %}background: url('{{row.feature_image.url}}');{% endif %};background-repeat:no-repeat;background-size:cover;" data-bg-url="">
+                        <div class="fusion-clearfix"></div>
+                  </div>
+            </div>
+      </div>
+      {% else %}
+      <div class="fusion-fullwidth fullwidth-box fusion-fullwidth-1 fusion-parallax-none nonhundred-percent-fullwidth uber-banner " style="margin-top:-50px;margin-bottom: 40px;min-height:260px;background-color: {% if row.quote_background_color == 'light' %}#efefef{% else %} #6e6e6e{% endif %};{% if row.hero_image_large.url|length > 0 %}background: url('{{row.hero_image_large.url}}');{% endif %};background-repeat:no-repeat;background-size:cover;">
+            <div class="col-md-4" style="margin-top:0px;padding-left:0px !important;">
+                  <div style="min-height:260px;background-color:#fff;{% if row.feature_image.url|length > 0 %}background: url('{{row.feature_image.url}}');{% endif %};background-repeat:no-repeat;background-size:cover;" data-bg-url="">
+                        <div class="fusion-clearfix"></div>
+                  </div>
+            </div>
+            <div class="col-md-7">
+                  <div class="fusion-column-wrapper" data-bg-url="">
+                        <h5 style="font-family: 'Apertura-Regular', 'Apertura';font-weight: 400;font-style: normal;font-size: 24px;color: {% if row.quote_background_color == 'light' %}#7e7e7e;{% else %} #fff;{% endif %}margin-left:20px;margin-bottom: 0px;" data-fontsize="18" data-lineheight="22">{{row.quote}}</h5>
+                        <p style="font-size: 20px;color: {% if row.quote_background_color == 'light' %}#7e7e7e;{% else %} #fff;{% endif %}margin-left:20px;margin-top: 5px;">{{row.quote_attribution_name_and_location}}</p>
+                        <div class="fusion-clearfix"></div>
+                  </div>
+            </div>
+      </div>
+
+      {% endif %}
+{% endif %}

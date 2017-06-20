@@ -1,0 +1,41 @@
+<style type="text/css">
+@media (max-width:480px) {
+      .single-products .product-header {
+            background-image: url("{% if row.section_background_480_645.url|length > 0 %}{{row.section_background_480_645.url}}{% elseif row.section_background.url|length > 0 %}{{row.section_background.url}}{% endif %}");
+      }
+}
+@media (min-width: 481px) and (max-width:768px) {
+      .single-products .product-header {
+            background-image: url("{% if row.section_background_768_570.url|length > 0 %}{{row.section_background_768_570.url}}{% elseif row.section_background.url|length > 0 %}{{row.section_background.url}}{% endif %}");
+      }
+}
+@media (min-width: 769px) and (max-width:992px) {
+      .single-products .product-header {
+            background-image: url("{% if row.section_background_992_410.url|length > 0 %}{{row.section_background_992_410.url}}{% elseif row.section_background.url|length > 0 %}{{row.section_background.url}}{% endif %}");
+      }
+}
+@media (min-width: 993px) {
+      .single-products .product-header {
+            background-image: url("{% if row.section_background_1440_410.url|length > 0 %}{{row.section_background_1440_410.url}}{% elseif row.section_background.url|length > 0 %}{{row.section_background.url}}{% endif %}");
+      }
+}
+</style>
+{% if row.acf_fc_layout == 'product_hero' %}
+      <div class="product-header fusion-fullwidth fullwidth-box fusion-fullwidth-1 fusion-parallax-none nonhundred-percent-fullwidth uber-banner " style="margin-top:-50px;margin-bottom: 45px; background-position: center center; background-repeat:no-repeat; background-size:cover;">
+            <div class="fusion-row intro-container">
+                 <div class="col-md-5 col-sm-12">
+                       <h1>{{post.title}}</h1>
+                       {{row.tag_line}}
+                 </div>
+                 <div class="col-md-4 col-sm-12 col-md-offset-3" id="avaform-container">
+                  {% if post.get_field('show_avaform') == true and post.device == 'desktop'  %}
+                        <div class="opacity-container">
+                              <div class="form-opacity-wrap">
+                                    {% filter shortcodes %}{{post.get_field('avaform_shortcode')}}{% endfilter %}
+                              </div>
+                        </div>
+                  {% endif %}
+                 </div>
+            </div>
+      </div>
+{% endif %}

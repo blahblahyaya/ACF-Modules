@@ -1,0 +1,53 @@
+<style type="text/css">
+    #ava-contact-map {
+        width: 513px;
+        height: 246px;
+        margin-bottom: 45px;
+    }
+    @media (max-width:768px) {
+        #ava-contact-map {
+            width: 80%;
+            height: auto;
+        }
+    }
+</style>
+<div id="content" class="avalara-cpt-no-sidebar ava-contact ava-spacing">
+    <div class="fusion-builder-row fusion-row">
+        <div class="col-sm-12 ava-padding">
+            <h1 class="title-heading-left">{{post.title}}</h1>
+        </div>
+    </div>
+    <div class="fusion-builder-row fusion-row" style="margin-bottom: 45px;">
+        <div class="col-md-4 col-sm-12 ava-padding">
+            <div>
+                <h2 style="font-weight: 400;font-style: normal;font-size: 24px;color: #e65000;">Leave a message</h2>
+            </div>
+            <div class="fusion-column-wrapper" style="background-position:left top;background-repeat:no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;" data-bg-url="">
+                <div id="avaform-container">
+            {% if post.get_field('show_avaform') == true %}
+                    <div class="opacity-container">
+                        <div class="form-opacity-wrap">
+                            {% filter shortcodes %}{{post.get_field('avaform_shortcode')}}{% endfilter %}
+                        </div>
+                  </div>
+            {% endif %}
+                </div>
+            </div>
+            <div class="fusion-clearfix"></div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div>
+                <h2 style="margin-bottom: 0px;padding-bottom: 5px;">Call</h2>
+                <h4 class="contact-label">{{row.phone_label}}</h4>
+                <p>{{row.phone_number}}</p>
+                <h4 class="contact-label">{{row.phone_label_2}}</h4>
+                <p>{{row.phone_number_2}}</p>
+                <h2 style="margin-bottom: 0px;padding-bottom: 5px;">Location</h2>
+                {{row.address}}
+            </div>
+            <div id="ava-contact-map">
+                {{row.map}}
+            </div>
+        </div>
+    </div>
+</div>

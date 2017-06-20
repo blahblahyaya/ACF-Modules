@@ -1,0 +1,46 @@
+Index: assets/css/products.css
+===================================================================
+--- assets/css/products.css
++++ assets/css/products.css
+@@ -26,10 +26,12 @@
+   font-size: 18px;
+   font-weight: 400;
+ }
+ .ava-products .intro-container {
++  display: -ms-flexbox;
+   display: flex;
+-  align-items: center;
++  -ms-flex-align: center;
++      align-items: center;
+ }
+ .ava-products .feature-section {
+   position: relative;
+ }
+@@ -108,10 +110,12 @@
+   background-size: cover;
+   padding-top: 0px;
+ }
+ .ava-partners .intro-container {
++  display: -ms-flexbox;
+   display: flex;
+-  align-items: center;
++  -ms-flex-align: center;
++      align-items: center;
+ }
+ .ava-partners .feature-section {
+   position: relative;
+ }
+@@ -198,10 +202,12 @@
+   background-size: cover;
+   padding-top: 0px;
+ }
+ .ava-about .intro-container {
++  display: -ms-flexbox;
+   display: flex;
+-  align-items: center;
++  -ms-flex-align: center;
++      align-items: center;
+ }
+ .ava-about .feature-section {
+   position: relative;
+ }
